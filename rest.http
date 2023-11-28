@@ -1,0 +1,54 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA3MjgwMzgsImV4cCI6MTcwMDczMTYzOCwiYXVkIjoiNjU1ZjBjZTVlODBiZmM1ODJmOTJlMzJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.iMuSgXfUg-HKxiiuZjSFKwSeJq5H1PVXlFtTQpcDGdo
+
+###Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "waa@gmail.com",
+    "password": "ayouboues2001"
+     
+}
+
+###Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "waa@gmail.com",
+    "password": "ayouboues2001"
+
+}
+
+###Refresh token  Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA3MjgwNzMsImV4cCI6MTcwMDczMTY3MywiYXVkIjoiNjU1ZjBjZTVlODBiZmM1ODJmOTJlMzJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.eMGVMUsSkPO5WZxewlUn8dF2R93I8If4M5HriJIiVDQ" 
+}
+
+###logout Route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDA3MjgwNzMsImV4cCI6MTcwMDczMTY3MywiYXVkIjoiNjU1ZjBjZTVlODBiZmM1ODJmOTJlMzJiIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.eMGVMUsSkPO5WZxewlUn8dF2R93I8If4M5HriJIiVDQ" 
+}
+
+### Forgot Password Route
+POST http://localhost:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email": "waa@gmail.com"
+}
+
+### Reset Password Route
+POST http://localhost:3000/auth/reset-password/your_reset_token
+Content-Type: application/json
+
+{
+    "password": "papa"
+}
